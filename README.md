@@ -76,19 +76,25 @@ Kasus 3 tidak menghasilkan kesimpulan karena udara hangat dan lembap saja belum 
 
 ✅ Kasus 1:
 
-![Kasus 1](ScreenShoot/kasus1.png)
+![Kasus 1](ScreenShoot/Kasus1.png)
 
 ✅ Kasus 2:
 
-![Kasus 2](ScreenShoot/kasus2.png)
+![Kasus 2](ScreenShoot/Kasus2.png)
 
 🚫 Kasus 3 (tidak ada kesimpulan):
 
-![Kasus 3](ScreenShoot/kasus3.png)
+![Kasus 3](ScreenShoot/Kasus3.png)
 
 ## ⚠️ Batas keberlakuan
 
-Pengetahuan dalam program ini berasal dari tiga dokumen: surat edaran BMKG tentang parameter prakiraan cuaca (SE.3/DM/XII/2024) untuk kategori tutupan awan dan curah hujan, jurnal Unnes Physics Journal (Saragih dkk., 2018) tentang hujan lebat dan awan Cumulonimbus, serta jurnal Sains & Teknologi Modifikasi Cuaca (Zahroh dkk., 2017) tentang badai guntur, yang dirangkum penulis menjadi aturan sederhana. Aturan berlaku untuk pengamatan cuaca di wilayah tropis Indonesia; ambang kelembapan berasal dari kajian di pesisir timur Sumatera Utara dan hanya perkiraan untuk tempat lain. Program tidak mengukur data atmosfer atas (radiosonde, satelit) dan tidak memberi peringatan dini; kategori tutupan awan hanya dari pengamatan langit, jadi bisa meleset. Jawaban "tidak ada kesimpulan" tidak berarti cuaca aman. Hasilnya adalah saran awal, bukan keputusan akhir: ikuti prakiraan dan peringatan resmi BMKG. Catatan yang sama ditampilkan di akhir keluaran program.
+### Sumber Pengetahuan dan Batasan Program
+
+Pengetahuan dalam program ini mengacu pada tiga sumber, yaitu Surat Edaran BMKG Nomor SE.3/DM/XII/2024 tentang parameter prakiraan cuaca, jurnal *Unnes Physics Journal* oleh Saragih dkk. (2018) mengenai hujan lebat dan awan Cumulonimbus, serta jurnal *Sains & Teknologi Modifikasi Cuaca* oleh Zahroh dkk. (2017) tentang badai guntur. Informasi dari sumber tersebut dirangkum oleh penulis menjadi aturan sederhana menggunakan metode IF-THEN.
+
+Program ini ditujukan untuk pengamatan cuaca di wilayah tropis Indonesia. Namun, nilai ambang kelembapan mengacu pada penelitian di pesisir timur Sumatera Utara sehingga penerapannya di wilayah lain hanya berupa perkiraan. Program juga tidak menggunakan data atmosfer atas dan tidak berfungsi sebagai sistem peringatan dini. Hasil pengamatan tutupan awan pun dapat kurang akurat karena hanya berdasarkan kondisi langit yang terlihat secara langsung.
+
+Hasil program hanya merupakan gambaran awal dan bukan acuan utama dalam menentukan kondisi cuaca. Jika tidak ditemukan kesimpulan, bukan berarti cuaca dalam keadaan aman. Pengguna tetap perlu mengikuti prakiraan dan peringatan resmi dari BMKG.
 
 ## 🤖 Penggunaan Alat Bantu AI
 
