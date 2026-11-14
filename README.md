@@ -75,17 +75,17 @@ Kasus 3 tidak menghasilkan kesimpulan karena udara hangat dan lembap saja belum 
 
 ✅ Kasus 1:
 
-![Kasus 1](screenshoot/kasus1.png
+![Kasus 1](screenshoot/Kasus1.png
 )
 
 ✅ Kasus 2:
 
-![Kasus 2](screenshoot/kasus2.png
+![Kasus 2](screenshoot/Kasus2.png
 )
 
 🚫 Kasus 3 (tidak ada kesimpulan):
 
-![Kasus 3](screenshoot/kasus3
+![Kasus 3](screenshoot/Kasus3
 )
 
 ## ⚠️ Batas keberlakuan
@@ -94,6 +94,4 @@ Pengetahuan dalam program ini berasal dari tiga dokumen: surat edaran BMKG tenta
 
 ## 🤖 Penggunaan Alat Bantu AI
 
-Dalam pengerjaan tugas ini, saya menggunakan **Claude (Anthropic)** dan **Gemini (Google)** sebagai alat bantu dalam proses pembelajaran dan pengembangan program. Claude digunakan untuk membantu memahami struktur dan kerangka penyusunan file JSON serta memberikan penjelasan mengenai penerapan aturan IF-THEN. Sementara itu, Gemini digunakan untuk membantu mencari ide dan memberikan referensi awal terkait pemilihan topik sistem pakar. 
-
-Seluruh proses penyusunan aturan, penyesuaian program, serta pengujian hasil dilakukan dengan pemahaman dan pemeriksaan kembali secara mandiri.
+Dalam pengerjaan tugas ini, saya menggunakan **Claude (Anthropic)** dan **Gemini (Google)** sebagai alat bantu dalam proses pembelajaran dan pengembangan program. Claude digunakan untuk membantu memahami struktur dan kerangka penyusunan file JSON serta memberikan penjelasan mengenai penerapan aturan IF-THEN. Sementara itu, Gemini digunakan untuk membantu mencari ide dan memberikan referensi awal terkait pemilihan topik sistem pakar. Seluruh proses penyusunan aturan, penyesuaian program, serta pengujian hasil dilakukan dengan pemahaman dan pemeriksaan kembali secara mandiri.
