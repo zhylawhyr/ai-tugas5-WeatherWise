@@ -75,18 +75,17 @@ Kasus 3 tidak menghasilkan kesimpulan karena udara hangat dan lembap saja belum 
 
 ✅ Kasus 1:
 
-![Kasus 1](<img width="1843" height="375" alt="image" src="https://github.com/user-attachments/assets/40deaacd-b5a7-4ca4-a06a-2413033286f9" />
-
+![Kasus 1](screenshoot/kasus1.png
 )
 
 ✅ Kasus 2:
 
-![Kasus 2](<img width="1850" height="422" alt="image" src="https://github.com/user-attachments/assets/5c161cfd-7d2d-4cab-9d2e-b085277ba5b7" />
+![Kasus 2](screenshoot/kasus2.png
 )
 
 🚫 Kasus 3 (tidak ada kesimpulan):
 
-![Kasus 3](<img width="1852" height="297" alt="image" src="https://github.com/user-attachments/assets/6b088f05-c36c-41b0-895c-bee53ed29dfa" />
+![Kasus 3](screenshoot/kasus3
 )
 
 ## ⚠️ Batas keberlakuan
