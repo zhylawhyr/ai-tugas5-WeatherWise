@@ -1,8 +1,8 @@
 # ⛅ Tugas 5 AI: WeatherWise
 ### Sistem Pakar Identifikasi Kondisi Cuaca
 
-👤 **Nama:** [ISI NAMA]  
-🎓 **NIM:** [ISI NIM]
+👤 **Nama:** Zhylalan Wahyu Ramadhani
+🎓 **NIM:** F1D02510137
 
 ## 🎯 Topik dan cara menjalankan
 
@@ -23,7 +23,6 @@ ai-tugas5-weatherwise/
 ├── main.py               (mesin forward chaining)
 ├── README.md
 └── screenshot/           (bukti 3 kasus uji)
-```
 
 ## 📚 Sumber
 
