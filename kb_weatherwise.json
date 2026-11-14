@@ -1,99 +1,19 @@
 {
   "judul": "WeatherWise: sistem pakar identifikasi kondisi cuaca",
-  "batas": "Aturan berasal dari 3 dokumen: surat edaran BMKG tentang parameter prakiraan cuaca (2024), jurnal Unnes Physics Journal (2018) tentang hujan lebat dan awan Cumulonimbus, dan jurnal Sains & Teknologi Modifikasi Cuaca (2017) tentang badai guntur. Hanya mencakup cuaca cerah, berawan, hujan lebat, dan potensi badai guntur dari pengamatan langit, kelembapan, dan curah hujan. Ambang kelembapan berasal dari kajian di Sumatera Utara dan bersifat perkiraan untuk wilayah tropis lain. Hasilnya saran awal, bukan peringatan dini; ikuti prakiraan dan peringatan resmi BMKG.",
+  "batas": "Aturan berasal dari 3 dokumen: surat edaran BMKG tentang parameter prakiraan cuaca (2024), jurnal Unnes Physics Journal (2017) tentang hujan lebat dan awan Cumulonimbus, dan jurnal Sains & Teknologi Modifikasi Cuaca (2017) tentang badai guntur. Hanya mencakup cuaca cerah, berawan, hujan lebat, dan potensi badai guntur dari pengamatan langit, kelembapan, dan curah hujan. Ambang kelembapan berasal dari kajian di Sumatera Utara dan bersifat perkiraan untuk wilayah tropis lain. Hasilnya saran awal, bukan peringatan dini; ikuti prakiraan dan peringatan resmi BMKG.",
   "sumber": {
     "S1": "Penggunaan Jenis dan Simbol Parameter Prakiraan Cuaca, Simbol Parameter Arah Angin, dan Simbol Parameter Indeks Ultraviolet (SE.3/DM/XII/2024), Deputi Bidang Meteorologi, BMKG, 2024, https://jdih.bmkg.go.id/common/dokumen/2024sedmbmkg003.pdf, diakses 14 Nov 2026",
-    "S2": "Kajian Dinamika Atmosfer saat Kejadian Hujan Lebat di Wilayah Pesisir Timur Sumatera Utara Menggunakan Model WRF-ARW dan Citra Satelit Himawari-8, Saragih dkk., Unnes Physics Journal Vol. 6 No. 1, Universitas Negeri Semarang, 2018, https://journal.unnes.ac.id/sju/upj/article/view/21895/10397, diakses 14 Nov 2026",
-    "S3": "Indeks Labilitas Udara untuk Memprediksi Kejadian Badai Guntur pada Puncak Musim Hujan Tahun 2016, Zahroh dkk., Jurnal Sains & Teknologi Modifikasi Cuaca Vol. 18 No. 1, 2017 (BB-TMC BPPT, dimuat di ejournal BRIN), https://ejournal.brin.go.id/JSTMC/article/download/1307/727/4661, diakses 14 Nov 2026"
+    "S2": "Kajian Dinamika Atmosfer saat Kejadian Hujan Lebat di Wilayah Pesisir Timur Sumatera Utara Menggunakan Model WRF-ARW dan Citra Satelit Himawari-8, Saragih dkk., Unnes Physics Journal Vol. 6 No. 1, Universitas Negeri Semarang, 2017 (terbit Februari 2018), https://journal.unnes.ac.id/sju/upj/article/view/21895/10397, diakses 14 Nov 2026",
+    "S3": "Indeks Labilitas Udara untuk Memprediksi Kejadian Badai Guntur pada Puncak Musim Hujan Tahun 2016, Zahroh dkk., Jurnal Sains & Teknologi Modifikasi Cuaca Vol. 18 No. 1, Badan Riset dan Inovasi Nasional (BRIN), 2017, https://ejournal.brin.go.id/JSTMC/article/download/1307/727/4661, diakses 14 Nov 2026"
   },
   "aturan": [
-    {
-      "id": "R1",
-      "jika": [
-        "kelembapan udara 70% atau lebih",
-        "udara permukaan terasa hangat dan lembap"
-      ],
-      "mode": "dan",
-      "maka": "atmosfer lembap dan mendukung awan hujan",
-      "sumber": [
-        "S2",
-        "S3"
-      ],
-      "catatan": "Penafsiran penulis: S2 mencatat RH 70% atau lebih pada fase tumbuh awan Cb, S3 menyebut badai guntur terbentuk dari udara hangat dan lembap yang naik."
-    },
-    {
-      "id": "R2",
-      "jika": [
-        "atmosfer lembap dan mendukung awan hujan",
-        "terlihat awan gelap pekat bertekstur seperti bunga kol (Cumulonimbus)"
-      ],
-      "mode": "dan",
-      "maka": "berpotensi hujan lebat disertai petir",
-      "sumber": [
-        "S2",
-        "S3"
-      ]
-    },
-    {
-      "id": "R3",
-      "jika": [
-        "curah hujan 50 sampai 100 mm per hari",
-        "curah hujan 10 sampai 20 mm per jam"
-      ],
-      "mode": "atau",
-      "maka": "hujan lebat",
-      "sumber": "S1"
-    },
-    {
-      "id": "R4",
-      "jika": [
-        "langit tidak tertutup awan atau tutupan awan kurang dari 10%"
-      ],
-      "mode": "dan",
-      "maka": "cuaca cerah",
-      "sumber": "S1"
-    },
-    {
-      "id": "R5",
-      "jika": [
-        "tutupan awan sekitar 10 sampai 60%"
-      ],
-      "mode": "dan",
-      "maka": "cuaca cerah berawan",
-      "sumber": "S1"
-    },
-    {
-      "id": "R6",
-      "jika": [
-        "tutupan awan sekitar 60 sampai 90%"
-      ],
-      "mode": "dan",
-      "maka": "cuaca berawan",
-      "sumber": "S1"
-    },
-    {
-      "id": "R7",
-      "jika": [
-        "tutupan awan sekitar 90%"
-      ],
-      "mode": "dan",
-      "maka": "cuaca berawan tebal",
-      "sumber": "S1"
-    },
-    {
-      "id": "R8",
-      "jika": [
-        "tutupan awan sekitar 90%",
-        "kelembapan udara 70% atau lebih"
-      ],
-      "mode": "dan",
-      "maka": "ada kemungkinan hujan, siapkan payung",
-      "sumber": [
-        "S1",
-        "S2"
-      ],
-      "catatan": "Penafsiran penulis: langit tertutup sekitar 90% (S1) ditambah udara lembap (S2) dianggap tanda kemungkinan hujan."
-    }
+    {"id": "R1", "jika": ["kelembapan udara 70% atau lebih", "udara permukaan terasa hangat dan lembap"], "mode": "dan", "maka": "atmosfer lembap dan mendukung awan hujan", "sumber": ["S2", "S3"], "catatan": "Penafsiran penulis: S2 mencatat RH 70% atau lebih pada fase tumbuh awan Cb, S3 menyebut badai guntur terbentuk dari udara hangat dan lembap yang naik."},
+    {"id": "R2", "jika": ["atmosfer lembap dan mendukung awan hujan", "terlihat awan gelap pekat bertekstur seperti bunga kol (Cumulonimbus)"], "mode": "dan", "maka": "berpotensi hujan lebat disertai petir", "sumber": ["S2", "S3"]},
+    {"id": "R3", "jika": ["curah hujan 50 sampai 100 mm per hari", "curah hujan 10 sampai 20 mm per jam"], "mode": "atau", "maka": "hujan lebat", "sumber": "S1"},
+    {"id": "R4", "jika": ["langit tidak tertutup awan atau tutupan awan kurang dari 10%"], "mode": "dan", "maka": "cuaca cerah", "sumber": "S1"},
+    {"id": "R5", "jika": ["tutupan awan sekitar 10 sampai 60%"], "mode": "dan", "maka": "cuaca cerah berawan", "sumber": "S1"},
+    {"id": "R6", "jika": ["tutupan awan sekitar 60 sampai 90%"], "mode": "dan", "maka": "cuaca berawan", "sumber": "S1"},
+    {"id": "R7", "jika": ["tutupan awan sekitar 90%"], "mode": "dan", "maka": "cuaca berawan tebal", "sumber": "S1"},
+    {"id": "R8", "jika": ["tutupan awan sekitar 90%", "kelembapan udara 70% atau lebih"], "mode": "dan", "maka": "ada kemungkinan hujan, siapkan payung", "sumber": ["S1", "S2"], "catatan": "Penafsiran penulis: langit tertutup sekitar 90% (S1) ditambah udara lembap (S2) dianggap tanda kemungkinan hujan."}
   ]
 }
-
