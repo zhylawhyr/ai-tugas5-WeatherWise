@@ -50,6 +50,19 @@ ai-tugas5-weatherwise/
 
 Catatan: R1 dan R8 adalah penafsiran penulis atas isi sumber (S2 mencatat kelembapan relatif 70% atau lebih pada fase tumbuh awan Cumulonimbus; S3 menyebut badai guntur terbentuk dari udara hangat dan lembap yang naik). Hal ini juga tertulis di kolom `catatan` file JSON. Angka tutupan awan dan kategori curah hujan (R3 sampai R7) diambil langsung dari S1.
 
+
+## 🔍 Dasar tiap aturan di sumber
+Aturan	Yang dinyatakan sumber (parafrasa)	Sumber
+R1	S2: kelembapan relatif 70% atau lebih pada fase tumbuh awan Cumulonimbus (Cb). S3: badai guntur terbentuk saat udara hangat dan lembap naik pada atmosfer yang tidak stabil. Penulis memakainya sebagai kondisi yang bisa ditanyakan di permukaan (penafsiran).	S2, S3
+R2	S2: hujan lebat berkaitan dengan aktivitas konvektif, yaitu awan Cb yang gelap, pekat, dan bertekstur seperti bunga kol. S3: badai guntur berasal dari gugusan awan Cb.	S2, S3
+R3	S1: hujan lebat berkisar 50 sampai 100 mm per hari atau 10 sampai 20 mm per jam.	S1
+R4	S1: cerah bila langit tidak tertutup awan atau tutupan awan kurang dari 10%.	S1
+R5	S1: cerah berawan bila tutupan awan sekitar 10 sampai 60%.	S1
+R6	S1: berawan bila tutupan awan sekitar 60 sampai 90%.	S1
+R7	S1: berawan tebal bila tutupan awan sekitar 90%.	S1
+R8	S1: kategori berawan tebal; S2: udara lembap menyertai awan penghasil hujan. Menggabungkan keduanya menjadi "ada kemungkinan hujan" adalah penafsiran penulis.	S1, S2
+
+
 ## ⚙️ Metode: Forward Chaining (FC)
 
 💡 Alasan memilih FC: kondisi cuaca diamati langsung (langit, kelembapan, hujan), jadi fakta sudah ada lebih dulu, lalu dicari kesimpulan apa saja yang berlaku. Satu keadaan bisa menghasilkan lebih dari satu kesimpulan, misalnya berawan tebal sekaligus kemungkinan hujan.
@@ -61,6 +74,19 @@ Catatan: R1 dan R8 adalah penafsiran penulis atas isi sumber (S2 mencatat kelemb
 3. Jika tidak ada, berhenti. Jika ada, ambil aturan pertama, tambahkan hasilnya ke memori, dan catat aturan asalnya.
 4. Ulangi dari langkah 2.
 5. Kesimpulan akhir adalah hasil aturan yang tidak dipakai sebagai syarat aturan lain. Alasan ditampilkan dengan menelusuri aturan asal ke belakang.
+
+## 🧩 Isi main.py (supaya mudah dijelaskan):
+
+Fungsi	Tugasnya
+muat_kb	membaca file kb_weatherwise.json
+fakta_dasar	mencari fakta yang tidak pernah menjadi hasil aturan, lalu menjadikannya daftar pertanyaan
+tanya_fakta	menanyakan y/t ke pengguna dan mengumpulkan jawaban "ya"
+syarat_terpenuhi	memeriksa syarat aturan: mode "dan" semua harus ada, mode "atau" salah satu cukup
+forward_chaining	mesin inferensi: mengulang pencarian aturan yang cocok sampai tidak ada hasil baru, sambil mencatat asal tiap hasil
+kesimpulan_akhir	memilih hasil yang tidak dipakai sebagai syarat aturan lain
+cetak_alasan	menampilkan pohon alasan dengan menelusuri aturan asal ke belakang
+main	menjalankan semuanya dan mencetak fakta awal, siklus, kesimpulan, alasan, dan catatan batas keberlakuan
+
 
 ## 🧪 Tiga kasus uji
 
