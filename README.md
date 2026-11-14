@@ -23,6 +23,7 @@ ai-tugas5-weatherwise/
 ├── main.py               (mesin forward chaining)
 ├── README.md
 └── screenshot/           (bukti 3 kasus uji)
+```
 
 ## 📚 Sumber
 
@@ -75,18 +76,15 @@ Kasus 3 tidak menghasilkan kesimpulan karena udara hangat dan lembap saja belum 
 
 ✅ Kasus 1:
 
-![Kasus 1](screenshoot/Kasus1.png
-)
+![Kasus 1](screenshot/kasus1.png)
 
 ✅ Kasus 2:
 
-![Kasus 2](screenshoot/Kasus2.png
-)
+![Kasus 2](screenshot/kasus2.png)
 
 🚫 Kasus 3 (tidak ada kesimpulan):
 
-![Kasus 3](screenshoot/Kasus3
-)
+![Kasus 3](screenshot/kasus3.png)
 
 ## ⚠️ Batas keberlakuan
 
