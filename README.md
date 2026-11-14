@@ -76,15 +76,15 @@ Kasus 3 tidak menghasilkan kesimpulan karena udara hangat dan lembap saja belum 
 
 ✅ Kasus 1:
 
-![Kasus 1](screenshot/kasus1.png)
+![Kasus 1](ScreenShoot/kasus1.png)
 
 ✅ Kasus 2:
 
-![Kasus 2](screenshot/kasus2.png)
+![Kasus 2](Screenshoot/kasus2.png)
 
 🚫 Kasus 3 (tidak ada kesimpulan):
 
-![Kasus 3](screenshot/kasus3.png)
+![Kasus 3](Screenshoot/kasus3.png)
 
 ## ⚠️ Batas keberlakuan
 
